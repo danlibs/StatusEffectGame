@@ -1,0 +1,547 @@
+fileFormatVersion: 2
+guid: a29cf9473aa8da5409601d76c3730dae
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6276792196258103306
+    second: FirePuppetSpritesheet2_0
+  - first:
+      213: 345691803183998546
+    second: FirePuppetSpritesheet2_1
+  - first:
+      213: -4881152364843162660
+    second: FirePuppetSpritesheet2_2
+  - first:
+      213: -84638278189482407
+    second: FirePuppetSpritesheet2_3
+  - first:
+      213: -9150446666392334964
+    second: FirePuppetSpritesheet2_4
+  - first:
+      213: 5890546528214666889
+    second: FirePuppetSpritesheet2_5
+  - first:
+      213: -5572201979771100024
+    second: FirePuppetSpritesheet2_6
+  - first:
+      213: 7278118947089988655
+    second: FirePuppetSpritesheet2_7
+  - first:
+      213: -5436612273557042264
+    second: FirePuppetSpritesheet2_8
+  - first:
+      213: 7890523616584093011
+    second: FirePuppetSpritesheet2_9
+  - first:
+      213: 6088538340027811883
+    second: FirePuppetSpritesheet2_10
+  - first:
+      213: 6590600015093246539
+    second: FirePuppetSpritesheet2_11
+  - first:
+      213: -4707782515482083704
+    second: FirePuppetSpritesheet2_12
+  - first:
+      213: -1134508329468615034
+    second: FirePuppetSpritesheet2_13
+  - first:
+      213: 7968527658262805510
+    second: FirePuppetSpritesheet2_14
+  - first:
+      213: 5246479266411294890
+    second: FirePuppetSpritesheet2_15
+  - first:
+      213: 7299531088652846795
+    second: FirePuppetSpritesheet2_16
+  - first:
+      213: 3754184815228618148
+    second: FirePuppetSpritesheet2_17
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 20
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FirePuppetSpritesheet2_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 74
+        width: 26
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a8496cf012b9e64c9c947710c92b018
+      internalID: -6276792196258103306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FirePuppetSpritesheet2_1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 74
+        width: 26
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a414677a820263340ae93da831dd1963
+      internalID: 345691803183998546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FirePuppetSpritesheet2_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 74
+        width: 30
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a8d6282d31662340b976b5e0aca6442
+      internalID: -4881152364843162660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FirePuppetSpritesheet2_3
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 74
+        width: 28
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 971fa1af32f53a640b8d49aff6bffb4d
+      internalID: -84638278189482407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FirePuppetSpritesheet2_4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 36
+        width: 31
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33615fc66f2e19d47ba5833398385f3d
+      internalID: -9150446666392334964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FirePuppetSpritesheet2_5
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 35
+        width: 31
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 961971b7b2bf96e4a9ef40f7a7ae7125
+      internalID: 5890546528214666889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FirePuppetSpritesheet2_6
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 35
+        width: 31
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8598198d0b7494147bedae39ee963c0d
+      internalID: -5572201979771100024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FirePuppetSpritesheet2_7
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 35
+        width: 31
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afe2a991f58073d468566bae8c9014ad
+      internalID: 7278118947089988655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FirePuppetSpritesheet2_8
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 35
+        width: 31
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a084a306accb4c46b2db4ddba43c6b5
+      internalID: -5436612273557042264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FirePuppetSpritesheet2_9
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 35
+        width: 31
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa7e721e91cb0cf4eb757034681aad05
+      internalID: 7890523616584093011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FirePuppetSpritesheet2_10
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 35
+        width: 31
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f55edf68d2f76204baf84db757e38a9a
+      internalID: 6088538340027811883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FirePuppetSpritesheet2_11
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 35
+        width: 31
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 386eb3d06404a674b8e40772c42a97d2
+      internalID: 6590600015093246539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FirePuppetSpritesheet2_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f07236354d008e54b9cf1ca0756d122a
+      internalID: -4707782515482083704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FirePuppetSpritesheet2_13
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 2
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d0fcf737c687e242aeac6b9b00bc6fe
+      internalID: -1134508329468615034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FirePuppetSpritesheet2_14
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 295f473453994624b8a55900e930839e
+      internalID: 7968527658262805510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FirePuppetSpritesheet2_15
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 1
+        width: 27
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a512ef3b55e6a40be1a7972701cf4f
+      internalID: 5246479266411294890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FirePuppetSpritesheet2_16
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 1
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03c24d4c695cb6649997b97162f1d6e0
+      internalID: 7299531088652846795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FirePuppetSpritesheet2_17
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 1
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc5c23be8b1b21240b7f913852537b75
+      internalID: 3754184815228618148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
