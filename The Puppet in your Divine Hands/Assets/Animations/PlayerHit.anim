@@ -20,22 +20,22 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 1846256792243099330, guid: 8466d66d71e4ce243949a4a74090e9a7,
+      value: {fileID: -3315667431757727338, guid: 8466d66d71e4ce243949a4a74090e9a7,
         type: 3}
     - time: 0.33333334
-      value: {fileID: -3315667431757727338, guid: 8466d66d71e4ce243949a4a74090e9a7,
+      value: {fileID: 1846256792243099330, guid: 8466d66d71e4ce243949a4a74090e9a7,
         type: 3}
     - time: 0.6666667
-      value: {fileID: 1846256792243099330, guid: 8466d66d71e4ce243949a4a74090e9a7,
+      value: {fileID: -3315667431757727338, guid: 8466d66d71e4ce243949a4a74090e9a7,
         type: 3}
     - time: 1
-      value: {fileID: -3315667431757727338, guid: 8466d66d71e4ce243949a4a74090e9a7,
-        type: 3}
-    - time: 1.3333334
       value: {fileID: 1846256792243099330, guid: 8466d66d71e4ce243949a4a74090e9a7,
         type: 3}
-    - time: 1.6666666
+    - time: 1.3333334
       value: {fileID: -3315667431757727338, guid: 8466d66d71e4ce243949a4a74090e9a7,
+        type: 3}
+    - time: 1.6666666
+      value: {fileID: 1846256792243099330, guid: 8466d66d71e4ce243949a4a74090e9a7,
         type: 3}
     - time: 2
       value: {fileID: 1846256792243099330, guid: 8466d66d71e4ce243949a4a74090e9a7,
@@ -59,12 +59,12 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 1846256792243099330, guid: 8466d66d71e4ce243949a4a74090e9a7, type: 3}
     - {fileID: -3315667431757727338, guid: 8466d66d71e4ce243949a4a74090e9a7, type: 3}
     - {fileID: 1846256792243099330, guid: 8466d66d71e4ce243949a4a74090e9a7, type: 3}
     - {fileID: -3315667431757727338, guid: 8466d66d71e4ce243949a4a74090e9a7, type: 3}
     - {fileID: 1846256792243099330, guid: 8466d66d71e4ce243949a4a74090e9a7, type: 3}
     - {fileID: -3315667431757727338, guid: 8466d66d71e4ce243949a4a74090e9a7, type: 3}
+    - {fileID: 1846256792243099330, guid: 8466d66d71e4ce243949a4a74090e9a7, type: 3}
     - {fileID: 1846256792243099330, guid: 8466d66d71e4ce243949a4a74090e9a7, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2

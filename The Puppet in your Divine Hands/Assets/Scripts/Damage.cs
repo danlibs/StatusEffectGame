@@ -17,6 +17,14 @@ public class Damage : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            if (this.transform.position.x > collision.transform.position.x)
+            {
+                player.knockbackFromRight = true;
+            }
+            else
+            {
+                player.knockbackFromRight = false;
+            }
             player.TookDamage(damage);
         }
     }

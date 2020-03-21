@@ -17,6 +17,10 @@ public class Player : MonoBehaviour
     public Slider weightSlider;
     public bool OnFire = false;
     public bool Invencible;
+    public float KnockbackForce;
+    public float knockbackLenght;
+    public float knockbackTimer;
+    public bool knockbackFromRight;
 
     private Rigidbody2D rb;
     private Animator anim;
@@ -44,7 +48,11 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        //Animação ativada ao clicar no botão "Burn!" da UI:
         anim.SetBool("OnFire", OnFire);
+
+        anim.SetFloat("Heavy", rb.mass);
+
         //Movimentação:
         movement = Input.GetAxis("Horizontal");
         anim.SetInteger("Speed", Mathf.RoundToInt(movement));
@@ -79,7 +87,23 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         //Realização da movimentação para a esquerda ou direita:
-        rb.velocity = new Vector2(movement * Speed * Time.fixedDeltaTime, rb.velocity.y);
+        if (knockbackTimer <= 0)
+        {
+            rb.velocity = new Vector2(movement * Speed * Time.fixedDeltaTime, rb.velocity.y);
+        }
+        else
+        {
+            if (knockbackFromRight)
+            {
+                rb.velocity = new Vector2(-KnockbackForce, KnockbackForce - 1);
+            }
+            else
+            {
+                rb.velocity = new Vector2(KnockbackForce, KnockbackForce - 1); ;
+            }
+            knockbackTimer -= Time.deltaTime;
+        }
+        
 
         //Realização do pulo:
         Vector2 jumpHeight = Vector2.up * (JumpForce + 5) * Time.fixedDeltaTime;
@@ -123,8 +147,8 @@ public class Player : MonoBehaviour
         if (!Invencible)
         {
             currentHealth -= damage;
-            rb.AddRelativeForce(new Vector2(-20, 10), ForceMode2D.Impulse);
             anim.SetTrigger("Hit");
+            knockbackTimer = knockbackLenght;
             healthSlider.value = currentHealth;
             Invencible = true;
             Invoke("ResetInvulnerability", 2f);
@@ -162,6 +186,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    //Acaba com a invencibilidade do player após receber dano:
     private void ResetInvulnerability()
     {
         Invencible = false;
