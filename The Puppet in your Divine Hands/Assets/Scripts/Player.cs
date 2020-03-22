@@ -86,6 +86,15 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (movement == 0 && isGrounded)
+        {
+            rb.gravityScale = 0;
+        }
+        else
+        {
+            rb.gravityScale = 3;
+        }
+
         //Realização da movimentação para a esquerda ou direita:
         if (knockbackTimer <= 0)
         {
