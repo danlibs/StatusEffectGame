@@ -18,8 +18,8 @@ TagManager:
   - Walls
   - Flammable
   - CameraConfiner
-  - 
-  - 
+  - PassPlatform
+  - Player
   - 
   - 
   - 
