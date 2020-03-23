@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     public float knockbackLenght;
     public float knockbackTimer;
     public bool knockbackFromRight;
+    public bool isDead = false;
 
     private Rigidbody2D rb;
     private Animator anim;
@@ -32,6 +33,7 @@ public class Player : MonoBehaviour
     private bool facingRight;
     private float jumpTimeCounter;
     private float timerDamage;
+    private GameManager gameManager;
 
     private void Awake()
     {
@@ -43,104 +45,125 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        gameManager = FindObjectOfType<GameManager>();
         healthSlider.value = currentHealth;
     }
 
     private void Update()
     {
-        //Animação ativada ao clicar no botão "Burn!" da UI:
-        anim.SetBool("OnFire", OnFire);
-
-        anim.SetFloat("Heavy", rb.mass);
-
-        //Movimentação:
-        movement = Input.GetAxis("Horizontal");
-        anim.SetInteger("Speed", Mathf.RoundToInt(movement));
-
-        //Verificação de contato com o chão a partir de um círculo invisível:
-        isGrounded = Physics2D.OverlapCircle(FeetPosition.position, CheckRadius, IsGround);
-        anim.SetBool("Jump", !isGrounded);
-
-        //Detectão de input do pulo:
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Return))
         {
-            jump = true;
+            gameManager.isPaused = !gameManager.isPaused;
         }
 
-        //Girar o personagem ao ir para a esquerda ou direita:
-        if (movement > 0 && facingRight)
+        if (currentHealth <= 0)
         {
-            Flip();
+            isDead = true;
         }
-        else if (movement < 0 && !facingRight)
+        else
         {
-            Flip();
+            isDead = false;
         }
 
-        //Se pegar fogo, perder vida constantemente.
-        if (OnFire)
+        if (!isDead)
         {
-            ContinuousDamage();
+            //Animação ativada ao clicar no botão "Burn!" da UI:
+            anim.SetBool("OnFire", OnFire);
+
+            anim.SetFloat("Heavy", rb.mass);
+
+            //Movimentação:
+            movement = Input.GetAxis("Horizontal");
+            anim.SetInteger("Speed", Mathf.RoundToInt(movement));
+
+            //Verificação de contato com o chão a partir de um círculo invisível:
+            isGrounded = Physics2D.OverlapCircle(FeetPosition.position, CheckRadius, IsGround);
+            anim.SetBool("Jump", !isGrounded);
+
+            //Detectão de input do pulo:
+            if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+            {
+                jump = true;
+            }
+
+            //Girar o personagem ao ir para a esquerda ou direita:
+            if (movement > 0 && facingRight)
+            {
+                Flip();
+            }
+            else if (movement < 0 && !facingRight)
+            {
+                Flip();
+            }
+
+            //Se pegar fogo, perder vida constantemente.
+            if (OnFire)
+            {
+                ContinuousDamage();
+            }
         }
     }
 
     private void FixedUpdate()
     {
-        if (movement == 0 && isGrounded)
+        if (!isDead)
         {
-            rb.gravityScale = 0;
-        }
-        else
-        {
-            rb.gravityScale = 3;
-        }
-
-        //Realização da movimentação para a esquerda ou direita:
-        if (knockbackTimer <= 0)
-        {
-            rb.velocity = new Vector2(movement * Speed * Time.fixedDeltaTime, rb.velocity.y);
-        }
-        else
-        {
-            if (knockbackFromRight)
+            if (movement == 0 && isGrounded)
             {
-                rb.velocity = new Vector2(-KnockbackForce, KnockbackForce - 1);
+                rb.gravityScale = 0;
             }
             else
             {
-                rb.velocity = new Vector2(KnockbackForce, KnockbackForce - 1); ;
+                rb.gravityScale = 3;
             }
-            knockbackTimer -= Time.deltaTime;
-        }
-        
 
-        //Realização do pulo:
-        Vector2 jumpHeight = Vector2.up * (JumpForce + 5) * Time.fixedDeltaTime;
-        if (jump)
-        {
-            rb.AddForce(jumpHeight, ForceMode2D.Impulse);
-            isJumping = true;
-            jumpTimeCounter = JumpTime;
-            jump = false;
-        }
-
-        //Quando mais tempo for apertada a tecla de pulo, mais alto o player pula:
-        if (Input.GetKey(KeyCode.Space) && isJumping)
-        {
-            if (jumpTimeCounter > 0)
+            //Realização da movimentação para a esquerda ou direita:
+            if (knockbackTimer <= 0)
             {
-                jumpTimeCounter -= Time.deltaTime;
-                rb.AddForce(jumpHeight + (jumpHeight * jumpTimeCounter), ForceMode2D.Impulse);
+                rb.velocity = new Vector2(movement * Speed * Time.fixedDeltaTime, rb.velocity.y);
             }
             else
+            {
+                if (knockbackFromRight)
+                {
+                    rb.velocity = new Vector2(-KnockbackForce, KnockbackForce - 1);
+                }
+                else
+                {
+                    rb.velocity = new Vector2(KnockbackForce, KnockbackForce - 1); ;
+                }
+                knockbackTimer -= Time.deltaTime;
+            }
+
+
+            //Realização do pulo:
+            Vector2 jumpHeight = Vector2.up * (JumpForce + 5) * Time.fixedDeltaTime;
+            if (jump)
+            {
+                rb.AddForce(jumpHeight, ForceMode2D.Impulse);
+                isJumping = true;
+                jumpTimeCounter = JumpTime;
+                jump = false;
+            }
+
+            //Quando mais tempo for apertada a tecla de pulo, mais alto o player pula:
+            if (Input.GetKey(KeyCode.Space) && isJumping)
+            {
+                if (jumpTimeCounter > 0)
+                {
+                    jumpTimeCounter -= Time.deltaTime;
+                    rb.AddForce(jumpHeight + (jumpHeight * jumpTimeCounter), ForceMode2D.Impulse);
+                }
+                else
+                {
+                    isJumping = false;
+                }
+            }
+            if (Input.GetKeyUp(KeyCode.Space))
             {
                 isJumping = false;
             }
-        }
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            isJumping = false;
-        }
+        }   
     }
 
     //Implementação do giro do personagem:
@@ -153,7 +176,7 @@ public class Player : MonoBehaviour
     //Receber dano de algo:
     public void TookDamage(int damage)
     {
-        if (!Invencible)
+        if (!Invencible && !isDead)
         {
             currentHealth -= damage;
             anim.SetTrigger("Hit");
