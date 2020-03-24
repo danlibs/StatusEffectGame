@@ -21,6 +21,7 @@ public class LeverToDoor : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             sp.sprite = ActivatedLeverSprite;
+            AudioManager.Instance.PlaySound("Lever");
             DoorToChange.GetComponent<SpriteRenderer>().sprite = SpriteOpenedDoor;
             OtherExitLever.GetComponent<SpriteRenderer>().sprite = OtherExitLever.GetComponent<LeverToDoor>().ActivatedLeverSprite;
         }

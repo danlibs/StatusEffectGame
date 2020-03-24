@@ -17,8 +17,9 @@ public class LeverToWayDoor : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
-        {
+        { 
             sp.sprite = ActivatedLeverSprite;
+            AudioManager.Instance.PlaySound("Lever");
             BarrierToRemove.GetComponent<BoxCollider2D>().enabled = false;
         }
     }

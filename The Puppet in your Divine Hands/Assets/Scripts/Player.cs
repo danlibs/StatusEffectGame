@@ -84,6 +84,7 @@ public class Player : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
             {
                 jump = true;
+                AudioManager.Instance.PlaySound("PlayerJump");
             }
 
             //Girar o personagem ao ir para a esquerda ou direita:
@@ -100,6 +101,10 @@ public class Player : MonoBehaviour
             if (OnFire)
             {
                 ContinuousDamage();
+            }
+            else
+            {
+                AudioManager.Instance.StopPlay("PlayerBurn");
             }
         }
     }
@@ -180,6 +185,7 @@ public class Player : MonoBehaviour
         {
             currentHealth -= damage;
             anim.SetTrigger("Hit");
+            AudioManager.Instance.PlaySound("PlayerHit");
             knockbackTimer = knockbackLenght;
             healthSlider.value = currentHealth;
             Invencible = true;
@@ -212,6 +218,7 @@ public class Player : MonoBehaviour
         timerDamage -= Time.deltaTime;
         if (timerDamage <= 0)
         {
+            AudioManager.Instance.PlaySound("PlayerBurn");
             currentHealth--;
             healthSlider.value = currentHealth;
             timerDamage = 2f;

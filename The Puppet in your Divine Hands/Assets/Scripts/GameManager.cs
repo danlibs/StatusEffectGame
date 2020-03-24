@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class GameManager : MonoBehaviour
     public bool isPaused = false;
 
     private GameObject player;
+    private float addTimeMusic;
 
     private void Start()
     {
@@ -37,9 +39,11 @@ public class GameManager : MonoBehaviour
 
     IEnumerator Dying()
     {
+        player.GetComponent<Player>().OnFire = false;
         player.GetComponent<Animator>().SetBool("Dead", player.GetComponent<Player>().isDead);
         player.GetComponent<Rigidbody2D>().gravityScale = 3;
         player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
+        this.GetComponent<AudioSource>().Stop();
         yield return new WaitForSeconds(3f);
         GameOver.SetActive(true);
     }

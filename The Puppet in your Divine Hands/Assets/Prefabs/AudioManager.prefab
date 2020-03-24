@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6082848797713526759
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6082848797713526757}
+  - component: {fileID: 6082848797713526758}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6082848797713526757
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6082848797713526759}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6082848797713526758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6082848797713526759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2108f6140c1fae439222c5432dcbaaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sounds:
+  - SoundName: PlayerJump
+    clip: {fileID: 8300000, guid: 1534fc1c46699bd43ac431c838acf6eb, type: 3}
+    Volume: 1
+    Pitch: 1
+    source: {fileID: 0}
+    Loop: 0
+  - SoundName: FireInBoxes
+    clip: {fileID: 8300000, guid: 3495ff9f530360a41b88bdefc93415af, type: 3}
+    Volume: 1
+    Pitch: 1
+    source: {fileID: 0}
+    Loop: 0
+  - SoundName: GameTheme
+    clip: {fileID: 8300000, guid: e5889b2e65d201344966ebdc6d493c47, type: 3}
+    Volume: 0
+    Pitch: 1
+    source: {fileID: 0}
+    Loop: 1
+  - SoundName: PlayerHit
+    clip: {fileID: 8300000, guid: ac3387bb90c1dd549953562480e95ec6, type: 3}
+    Volume: 1
+    Pitch: 1
+    source: {fileID: 0}
+    Loop: 0
+  - SoundName: PlayerDie
+    clip: {fileID: 8300000, guid: 7c3ff9bdc3c4c5c4e934adf1883c5749, type: 3}
+    Volume: 1
+    Pitch: 1
+    source: {fileID: 0}
+    Loop: 0
+  - SoundName: GameOverTheme
+    clip: {fileID: 8300000, guid: 328f76fd378aa3d44aabd9cc3299887c, type: 3}
+    Volume: 1
+    Pitch: 1
+    source: {fileID: 0}
+    Loop: 0
+  - SoundName: Lever
+    clip: {fileID: 8300000, guid: f221e2c628aa49640bd4edf4466a4c1d, type: 3}
+    Volume: 1
+    Pitch: 1
+    source: {fileID: 0}
+    Loop: 0
+  - SoundName: PlayerBurn
+    clip: {fileID: 8300000, guid: 8803e63aa9e859244b40f2a24701ac74, type: 3}
+    Volume: 1
+    Pitch: 1
+    source: {fileID: 0}
+    Loop: 0

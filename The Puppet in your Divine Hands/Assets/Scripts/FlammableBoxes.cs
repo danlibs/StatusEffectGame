@@ -24,6 +24,7 @@ public class FlammableBoxes : MonoBehaviour
             if (player.OnFire)
             {
                 anim.enabled = true;
+                AudioManager.Instance.PlaySound("FireInBoxes");
                 Destroy(this.gameObject, 0.5f);
             }
         }

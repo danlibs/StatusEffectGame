@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelLoader : MonoBehaviour
 {
     public Animator TransitionAnimator;
+    public Animator MusicTransitionAnimator;
 
     public void StartGame(string sceneName)
     {
@@ -14,6 +15,10 @@ public class LevelLoader : MonoBehaviour
 
     IEnumerator GameStarting(string sceneName)
     {
+        if (MusicTransitionAnimator != null)
+        {
+            MusicTransitionAnimator.SetTrigger("Fade");
+        }
         TransitionAnimator.SetTrigger("Start");
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(sceneName);
