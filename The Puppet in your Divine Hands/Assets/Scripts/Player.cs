@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     public float knockbackTimer;
     public bool knockbackFromRight;
     public bool isDead = false;
+    public bool CanMove = true;
 
     private Rigidbody2D rb;
     private Animator anim;
@@ -65,7 +66,7 @@ public class Player : MonoBehaviour
             isDead = false;
         }
 
-        if (!isDead)
+        if (!isDead && CanMove)
         {
             //Animação ativada ao clicar no botão "Burn!" da UI:
             anim.SetBool("OnFire", OnFire);

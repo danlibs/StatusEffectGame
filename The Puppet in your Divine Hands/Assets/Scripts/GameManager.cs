@@ -70,4 +70,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("Quiting game");
         Application.Quit();
     }
+
+    public void PlayerCanMove()
+    {
+        player.GetComponent<Player>().CanMove = !player.GetComponent<Player>().CanMove;
+    }
 }
