@@ -68,18 +68,6 @@ MonoBehaviour:
     Pitch: 1
     source: {fileID: 0}
     Loop: 0
-  - SoundName: PlayerDie
-    clip: {fileID: 8300000, guid: 7c3ff9bdc3c4c5c4e934adf1883c5749, type: 3}
-    Volume: 1
-    Pitch: 1
-    source: {fileID: 0}
-    Loop: 0
-  - SoundName: GameOverTheme
-    clip: {fileID: 8300000, guid: 328f76fd378aa3d44aabd9cc3299887c, type: 3}
-    Volume: 1
-    Pitch: 1
-    source: {fileID: 0}
-    Loop: 0
   - SoundName: Lever
     clip: {fileID: 8300000, guid: f221e2c628aa49640bd4edf4466a4c1d, type: 3}
     Volume: 1

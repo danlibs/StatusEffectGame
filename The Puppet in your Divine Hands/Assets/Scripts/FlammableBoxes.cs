@@ -29,4 +29,17 @@ public class FlammableBoxes : MonoBehaviour
             }
         }
     }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            if (player.OnFire)
+            {
+                anim.enabled = true;
+                AudioManager.Instance.PlaySound("FireInBoxes");
+                Destroy(this.gameObject, 0.5f);
+            }
+        }
+    }
 }

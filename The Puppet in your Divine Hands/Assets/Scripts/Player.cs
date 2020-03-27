@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public float Speed;
     public float JumpForce;
     public int MaxHealth;
+    public int currentHealth;
     public Transform FeetPosition;
     public float CheckRadius;
     public LayerMask IsGround;
@@ -27,7 +28,6 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     private float movement;
-    private int currentHealth;
     private bool isGrounded;
     private bool jump = false;
     private bool isJumping;

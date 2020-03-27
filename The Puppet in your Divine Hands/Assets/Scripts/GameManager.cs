@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
         player.GetComponent<Animator>().SetBool("Dead", player.GetComponent<Player>().isDead);
         player.GetComponent<Rigidbody2D>().gravityScale = 3;
         player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
+        player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
         this.GetComponent<AudioSource>().Stop();
         yield return new WaitForSeconds(3f);
         GameOver.SetActive(true);
@@ -69,6 +70,11 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Quiting game");
         Application.Quit();
+    }
+
+    public void GoToCredits()
+    {
+        levelLoader.StartGame("Credits");
     }
 
     public void PlayerCanMove()

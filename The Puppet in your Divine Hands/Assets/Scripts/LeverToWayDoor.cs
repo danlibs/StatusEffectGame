@@ -21,6 +21,7 @@ public class LeverToWayDoor : MonoBehaviour
             sp.sprite = ActivatedLeverSprite;
             AudioManager.Instance.PlaySound("Lever");
             BarrierToRemove.GetComponent<BoxCollider2D>().enabled = false;
+            this.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 

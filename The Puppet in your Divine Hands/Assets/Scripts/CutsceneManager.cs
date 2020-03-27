@@ -2,14 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.Timeline;
 using UnityEngine.SceneManagement;
 
 public class CutsceneManager : MonoBehaviour
 {
     public static CutsceneManager Instance;
+    public TimelineAsset[] Timelines;
     public bool FirstPlay = true;
+    public bool SomethingWasPressed = false;
+    public bool IntroFinished = false;
 
-    private PlayableDirector[] playableDirectors;
+    private PlayableDirector playableDirectors;
     private GameObject sounds;
 
     private void Awake()
@@ -31,29 +35,63 @@ public class CutsceneManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Game")
         {
             sounds = FindObjectOfType<GameManager>().gameObject;
-            playableDirectors = GameObject.FindGameObjectWithTag("LevelManager").GetComponents<PlayableDirector>();
+            playableDirectors = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<PlayableDirector>();
 
             if (FirstPlay)
             {
                 PlayCutscene(0);
                 sounds.GetComponent<AudioSource>().enabled = false;
                 sounds.GetComponent<Animator>().enabled = false;
-                GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().CanMove = false;
+                FirstPlay = false;
             }
+
+            StartCoroutine(TimeIntroCutscene());
+
         } else return;
 
     }
 
+    IEnumerator TimeIntroCutscene()
+    {
+        yield return new WaitUntil(() => IntroFinished == true);
+        if (Input.anyKeyDown)
+        {
+            SomethingWasPressed = true;
+        }
+        StartSecretFinal();
+    }
+
+    public void StartSecretFinal()
+    {
+        StartCoroutine(SecretFinal());
+    }
+
+    IEnumerator SecretFinal()
+    {
+        yield return new WaitForSeconds(120f);
+        if (SomethingWasPressed == false)
+        {
+            sounds.GetComponent<AudioSource>().enabled = false;
+            sounds.GetComponent<Animator>().enabled = false;
+            PlayCutscene(1);
+            SomethingWasPressed = true;
+        }
+    }
+
+    public void IntroCutsceneFinished()
+    {
+        IntroFinished = true;
+    }
+
     public void NotFirstPlay()
     {
-        FirstPlay = false;
         sounds.GetComponent<AudioSource>().enabled = true;
         sounds.GetComponent<Animator>().enabled = true;
     }
 
-    public void PlayCutscene(int cutsceneIndex)
+    public void PlayCutscene(int index)
     {
-        playableDirectors[cutsceneIndex].Play();
-
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().CanMove = false;
+        playableDirectors.Play(Timelines[index]);
     }
 }

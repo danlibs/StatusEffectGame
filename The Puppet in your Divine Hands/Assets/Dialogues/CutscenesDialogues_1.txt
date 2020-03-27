@@ -1,0 +1,66 @@
+[title=IntroCutscene1]
+It's been days since I was thrown in this place...
+I feel tired...
+God has abandoned me...
+[title=IntroCutscene2]
+No... That can't be.
+I'm a faithful man!
+I know God can hear me.
+[title=IntroCutscene3]
+I will beg for my life,
+and God will save me from this hole.
+I know They will.
+[title=IntroCutscene4]
+OH LORD! PLEASE SAVE ME!
+RECEIVE MY BODY
+AND DO WHATEVER IS THY WILL!
+CONTROL ME AND, PLEASE,
+LEAD ME OUT OF THIS PLACE!
+[title=IntroCutscene5]
+Now, I shall wait for thine actions.
+[title=IntroCutscene6]
+[title=Final01]
+Huh... 
+I'm nothing but a fool...
+God is not listening.
+[title=Final02]
+Maybe They don't even exist...
+I'll just stay here then...
+And probably die of starvation.
+[title=Final03]
+[title=Final11]
+My body hurts...
+With these wounds I may never have a normal life again...
+But...
+Am I... free?...
+I'm actually alive and free...
+[title=Final12]
+Lord, I'm wounded, but grateful.
+Maybe You tried to teach me a lesson...
+Everything has a price.
+Thou tookest my body and hast led me out of this place,
+but, even free, my life shall change.
+I humblely thank thee.
+[title=Final13]
+[title=Final21]
+Oh my God...
+That's a miracle!
+I'm here, alive and without pain!
+[title=Final22]
+Lord, I thank thee!
+Thou art my savior!
+Beyond it, I think thou art my friend.
+Thank you VERY much, Lord!
+[title=Final23]
+Bye! See you later!
+[title=Final24]
+[title=Tutorial1]
+As God, you can make the puppet walk (A and D keys), jump (Space) and enter doors (W key).
+[title=Tutorial2]
+Use the sliders to control his mass and speed.
+Remember: greater mass equals lower jumps, and vice-versa.
+Greater speed equals longer jumps, and vice-versa.
+[title=Tutorial3]
+You can set the fool on fire as well, just press this button.
+Although evil, it can be useful! Just... be careful with it.
+[title=Tutorial4]

@@ -28,4 +28,20 @@ public class Damage : MonoBehaviour
             player.TookDamage(damage);
         }
     }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            if (this.transform.position.x > collision.transform.position.x)
+            {
+                player.knockbackFromRight = true;
+            }
+            else
+            {
+                player.knockbackFromRight = false;
+            }
+            player.TookDamage(damage);
+        }
+    }
 }
