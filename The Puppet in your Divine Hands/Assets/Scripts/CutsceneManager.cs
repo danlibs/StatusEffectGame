@@ -94,4 +94,9 @@ public class CutsceneManager : MonoBehaviour
         GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().CanMove = false;
         playableDirectors.Play(Timelines[index]);
     }
+
+    public void StopCutscene(int index)
+    {
+        playableDirectors.Stop();
+    }
 }

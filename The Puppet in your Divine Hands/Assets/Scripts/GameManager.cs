@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
     public void ContinueGame()
     {
         isPaused = false;
+        this.GetComponent<AudioSource>().UnPause();
         Time.timeScale = 1;
     }
 

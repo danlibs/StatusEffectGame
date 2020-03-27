@@ -13,6 +13,18 @@ public class Door : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                player.position = DoorOut.position;
+            }
+        }
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))

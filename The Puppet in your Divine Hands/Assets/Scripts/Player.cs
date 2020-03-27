@@ -55,6 +55,14 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Return))
         {
             gameManager.isPaused = !gameManager.isPaused;
+            if (gameManager.GetComponent<AudioSource>().isPlaying)
+            {
+                gameManager.GetComponent<AudioSource>().Pause();
+            }
+            else
+            {
+                gameManager.GetComponent<AudioSource>().UnPause();
+            }
         }
 
         if (currentHealth <= 0)
@@ -71,6 +79,7 @@ public class Player : MonoBehaviour
             //Animação ativada ao clicar no botão "Burn!" da UI:
             anim.SetBool("OnFire", OnFire);
 
+            //Animação de alta massa:
             anim.SetFloat("Heavy", rb.mass);
 
             //Movimentação:
@@ -114,14 +123,14 @@ public class Player : MonoBehaviour
     {
         if (!isDead)
         {
-            if (movement == 0 && isGrounded)
-            {
-                rb.gravityScale = 0;
-            }
-            else
-            {
-                rb.gravityScale = 3;
-            }
+            //if (movement == 0 && isGrounded)
+            //{
+            //    rb.gravityScale = 0;
+            //}
+            //else
+            //{
+            //    rb.gravityScale = 3;
+            //}
 
             //Realização da movimentação para a esquerda ou direita:
             if (knockbackTimer <= 0)
