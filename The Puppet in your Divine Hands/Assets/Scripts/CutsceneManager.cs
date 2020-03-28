@@ -36,7 +36,6 @@ public class CutsceneManager : MonoBehaviour
         {
             sounds = FindObjectOfType<GameManager>().gameObject;
             playableDirectors = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<PlayableDirector>();
-
             if (FirstPlay)
             {
                 PlayCutscene(0);
@@ -91,8 +90,14 @@ public class CutsceneManager : MonoBehaviour
 
     public void PlayCutscene(int index)
     {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().CanMove = false;
         playableDirectors.Play(Timelines[index]);
+        if (playableDirectors.playableAsset == Timelines[index])
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().CanMove = false;
+        }
+        else return;
+        
+        
     }
 
     public void StopCutscene(int index)
